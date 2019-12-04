@@ -2,6 +2,10 @@
 
 > Hadoop é uma plataforma de computação distribuída voltada para clusters e processamento de grandes volumes de dados, com atenção a tolerância a falhas. Foi inspirada no MapReduce e no GoogleFS.
 
+> Marcos Antônio de Souza @mrcs13
+> 
+> Thaynara Mábille Marques Ribeiro
+
 ### Instalação
 
 Faça o download da versão 2.9.2 do Hadoop
@@ -164,12 +168,15 @@ hadoop@mrcs-Lenovo:~/hadoop292/etc/hadoop$ gedit hadoop-env.sh
 ```
 Altere o arquivo a seguinte linha
 ```XML
-export JAVA_HOME=/usr/lib/jvm/java-8-oracle/            #java-8-openjdk-amd64
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/
 ```
 Salve o arquivo e retorne ao terminal
 ```console
 hadoop@mrcs-Lenovo:~/hadoop292/etc/hadoop$ hdfs namenode -format
 hadoop@mrcs-Lenovo:~/hadoop292/etc/hadoop$ cd
+```
+### Execução
+```console
 hadoop@mrcs-Lenovo:~$ start-dfs.sh &
 hadoop@mrcs-Lenovo:~$ jps
 hadoop@mrcs-Lenovo:~$ start-yarn.sh &
