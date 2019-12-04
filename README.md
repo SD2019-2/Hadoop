@@ -2,8 +2,6 @@
 
 > Hadoop é uma plataforma de computação distribuída voltada para clusters e processamento de grandes volumes de dados, com atenção a tolerância a falhas. Foi inspirada no MapReduce e no GoogleFS.
 
-![Logo Hadoop](/images/logo-hadoop.png)
-
 ### Instalação
 
 Faça o download da versão 2.9.2 do Hadoop
@@ -50,7 +48,7 @@ export HADOOP_STREAMING=$HADOOP_HOME/share/hadoop/tools/lib/hadoop-streaming-2.9
 export HADOOP_LOG_DIR=$HADOOP_HOME/logs
 ```
 Salve o arquivo e retorne ao terminal
-```shell
+```console
 hadoop@mrcs-Lenovo:~$ source ~/.bashrc
 hadoop@mrcs-Lenovo:~$ echo $HADOOP_HOME
 hadoop@mrcs-Lenovo:~$ mkdir /home/hadoop/hadoop292/data
@@ -74,7 +72,7 @@ Altere o arquivo as seguintes linhas
 </configuration>
 ```
 Salve o arquivo e retorne ao terminal
-```bash
+```console
 hadoop@mrcs-Lenovo:~/hadoop292/etc/hadoop$ gedit hdfs-site.xml
 ```
 Altere o arquivo as seguintes linhas
@@ -97,7 +95,7 @@ Altere o arquivo as seguintes linhas
 </configuration>
 ```
 Salve o arquivo e retorne ao terminal
-```sh
+```console
 hadoop@mrcs-Lenovo:~/hadoop292/etc/hadoop$ gedit yarn-site.xml
 ```
 Altere o arquivo as seguintes linhas
@@ -135,7 +133,7 @@ Altere o arquivo as seguintes linhas
 </configuration>
 ```
 Salve o arquivo e retorne ao terminal
-```zsh
+```console
 hadoop@mrcs-Lenovo:~/hadoop292/etc/hadoop$ cp mapred-site.xml.template mapred-site.xml
 hadoop@mrcs-Lenovo:~/hadoop292/etc/hadoop$ gedit mapred-site.xml
 ```
@@ -161,7 +159,7 @@ Altere o arquivo as seguintes linhas
 </configuration>
 ```
 Salve o arquivo e retorne ao terminal
-```PowerShell
+```console
 hadoop@mrcs-Lenovo:~/hadoop292/etc/hadoop$ gedit hadoop-env.sh
 ```
 Altere o arquivo a seguinte linha
@@ -169,7 +167,7 @@ Altere o arquivo a seguinte linha
 export JAVA_HOME=/usr/lib/jvm/java-8-oracle/            #java-8-openjdk-amd64
 ```
 Salve o arquivo e retorne ao terminal
-```ps
+```console
 hadoop@mrcs-Lenovo:~/hadoop292/etc/hadoop$ hdfs namenode -format
 hadoop@mrcs-Lenovo:~/hadoop292/etc/hadoop$ cd
 hadoop@mrcs-Lenovo:~$ start-dfs.sh &
@@ -191,7 +189,7 @@ Acesse o link [localhost:50070](http://localhost:50070)
 Acesse o link [localhost:8088](http://localhost:8088)
 
 Volte para o terminal 
-```bat
+```console
 hadoop@mrcs-Lenovo:~/hadoop292/etc/hadoop$ cd
 hadoop@mrcs-Lenovo:~$ hadoop jar hadoop292/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.9.2.jar
 hadoop@mrcs-Lenovo:~$ hadoop jar hadoop292/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.9.2.jar wordcount /user/hadoop/input/ /user/hadoop/output/wc
